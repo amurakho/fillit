@@ -6,7 +6,7 @@
 #    By: tvoronyu <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/17 11:28:00 by tvoronyu          #+#    #+#              #
-#    Updated: 2018/05/17 14:21:00 by tvoronyu         ###   ########.fr        #
+#    Updated: 2018/05/17 19:36:44 by tvoronyu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ LIBFT =	libft/libft.a
 
 CC = gcc
 
-FLAGS = 
+FLAGS = -Wall -Werror -Wextra 
 
 all: $(NAME)
 
