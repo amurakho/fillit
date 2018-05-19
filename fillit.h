@@ -6,7 +6,7 @@
 /*   By: tvoronyu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 18:12:13 by tvoronyu          #+#    #+#             */
-/*   Updated: 2018/05/04 13:02:09 by tvoronyu         ###   ########.fr       */
+/*   Updated: 2018/05/19 12:01:33 by tvoronyu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,10 @@ int		ft_check_2_1_3(char *ptr[]);
 char	***ft_mas_alpha(char ***str);
 int		ft_display(char ***mas);
 void	main_2(char ***figures, int count_figur);
+char	*ft_verificare_3(char *str);
+char	*ft_slash_nl(char *str);
+char	***ft_mas_1(char *str);
+int		ft_test_nl(char ***mas);
+char	***ft_write_1(char ***mas, char *str);
 
 #endif

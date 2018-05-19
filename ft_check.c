@@ -6,7 +6,7 @@
 /*   By: tvoronyu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/26 14:52:33 by tvoronyu          #+#    #+#             */
-/*   Updated: 2018/05/08 13:56:43 by tvoronyu         ###   ########.fr       */
+/*   Updated: 2018/05/19 12:05:14 by tvoronyu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,53 @@ int			ft_check_2(char *str)
 		str++;
 	}
 	return (1);
+}
+
+char		*ft_slash_nl(char *str)
+{
+	char	*s1;
+	char	*s2;
+	int		i;
+
+	i = 0;
+	s1 = ft_strnew(ft_strlen(str));
+	s2 = s1;
+	while (str[i] != '\0')
+	{
+		if (str[i] == '\n' && str[i + 1] == '\n' && str[i] != '\0')
+			i++;
+		*s1 = str[i];
+		s1++;
+		i++;
+	}
+	return (s2);
+}
+
+char		***ft_mas_1(char *str)
+{
+	char	***mas;
+	size_t	i;
+	size_t	n;
+
+	n = 0;
+	mas = NULL;
+	if (!(ft_strlen(str) % 20))
+	{
+		if (!(mas = (char***)malloc(sizeof(char**) * (((ft_strlen(str)) / 20)
+							+ 1))))
+			return (NULL);
+		mas[(ft_strlen(str) / 20)] = NULL;
+		while (n < ((ft_strlen(str)) / 20))
+		{
+			if (!(mas[n] = (char**)malloc(sizeof(char*) * 5)))
+				return (NULL);
+			mas[n][4] = NULL;
+			i = 0;
+			while (i < 4)
+				mas[n][i++] = ft_strnew(5);
+			n++;
+		}
+	}
+	mas = ft_write_1(mas, str);
+	return (mas);
 }

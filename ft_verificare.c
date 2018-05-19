@@ -6,7 +6,7 @@
 /*   By: tvoronyu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/26 14:54:14 by tvoronyu          #+#    #+#             */
-/*   Updated: 2018/05/08 14:04:02 by tvoronyu         ###   ########.fr       */
+/*   Updated: 2018/05/19 12:00:41 by tvoronyu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,13 @@ void		ft_check_2_2_2(char *s[], char *str, int i)
 		s[2] = str;
 	if (i == 3)
 		s[3] = str;
+}
+
+char		*ft_verificare_3(char *str)
+{
+	if (ft_test_nl(ft_mas_1(ft_slash_nl(str))) == 1)
+		error();
+	return (str);
 }
 
 int			ft_display(char ***mas)
